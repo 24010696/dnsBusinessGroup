@@ -18,8 +18,8 @@ export function DivisionGallery({ images, title = "Our Work" }: DivisionGalleryP
         )}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {images.map((img, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className="group relative aspect-square overflow-hidden rounded-xl border border-border bg-card shadow-soft cursor-pointer"
               onClick={() => setLightboxIndex(idx)}
             >
@@ -36,19 +36,19 @@ export function DivisionGallery({ images, title = "Our Work" }: DivisionGalleryP
       </section>
 
       {lightboxIndex !== null && (
-        <div 
+        <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm"
           onClick={() => setLightboxIndex(null)}
         >
-          <button 
+          <button
             className="absolute top-4 right-4 text-white/80 hover:text-white"
             onClick={() => setLightboxIndex(null)}
           >
             ✕
           </button>
-          <img 
-            src={images[lightboxIndex].src} 
-            alt={images[lightboxIndex].alt} 
+          <img
+            src={images[lightboxIndex].src}
+            alt={images[lightboxIndex].alt}
             className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}
           />

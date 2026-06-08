@@ -16,10 +16,10 @@ export function QuoteForm({ division }: QuoteFormProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Build WhatsApp message
     const text = `Hi DNS ${division},
-    
+
 I'd like to request a quote.
 
 Name: ${formData.name}
@@ -28,14 +28,14 @@ Phone: ${formData.phone}
 Message: ${formData.message}
 
 Thank you!`;
-    
+
     // Encode and redirect to WhatsApp
     const encoded = encodeURIComponent(text);
     const whatsappUrl = `https://wa.me/27695371288?text=${encoded}`;
-    
+
     // Open WhatsApp in new tab
     window.open(whatsappUrl, "_blank");
-    
+
     // Optional: clear form after sending
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
@@ -46,7 +46,7 @@ Thank you!`;
       <p className="text-sm text-muted-foreground mb-6">
         Fill out the form and we'll respond instantly on WhatsApp.
       </p>
-      
+
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium mb-1">Full Name *</label>
@@ -58,7 +58,7 @@ Thank you!`;
             className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
           />
         </div>
-        
+
         <div>
           <label className="block text-sm font-medium mb-1">Email *</label>
           <input
@@ -69,7 +69,7 @@ Thank you!`;
             className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
           />
         </div>
-        
+
         <div>
           <label className="block text-sm font-medium mb-1">Phone Number *</label>
           <input
@@ -80,7 +80,7 @@ Thank you!`;
             className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
           />
         </div>
-        
+
         <div>
           <label className="block text-sm font-medium mb-1">Message *</label>
           <textarea
@@ -91,14 +91,14 @@ Thank you!`;
             className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
           />
         </div>
-        
+
         <button
           type="submit"
           className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[var(--brand-green)] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[var(--brand-green-deep)] transition-colors"
         >
           <Phone className="h-4 w-4" /> Send via WhatsApp
         </button>
-        
+
         <p className="text-xs text-muted-foreground text-center">
           You'll be redirected to WhatsApp to complete the message.
         </p>

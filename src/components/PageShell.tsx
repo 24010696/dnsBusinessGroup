@@ -95,7 +95,7 @@ export function PageShell({ children }: { children: React.ReactNode }) {
               <p className="text-sm text-white/70 max-w-sm leading-relaxed">
                 {SITE.description}
               </p>
-              
+
               <div className="mt-6 flex gap-4">
                 <a href={SITE.socials.facebook} className="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[var(--brand-green)] transition-colors">
                   <Facebook className="h-5 w-5" />

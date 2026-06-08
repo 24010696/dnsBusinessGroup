@@ -1,20 +1,20 @@
 import { Quote } from "lucide-react";
 
 const REVIEWS = [
-  { 
-    name: "Thabo M.", 
-    role: "Logistics Manager", 
-    text: "DNS Transportation delivered our cargo 2 days ahead of schedule. Professional team, real-time tracking, no excuses." 
+  {
+    name: "Thabo M.",
+    role: "Logistics Manager",
+    text: "DNS Transportation delivered our cargo 2 days ahead of schedule. Professional team, real-time tracking, no excuses."
   },
-  { 
-    name: "Naledi K.", 
-    role: "Project Director", 
-    text: "DNS Outdoor built our billboard and it's survived 3 storms. The fabrication quality is superior." 
+  {
+    name: "Naledi K.",
+    role: "Project Director",
+    text: "DNS Outdoor built our billboard and it's survived 3 storms. The fabrication quality is superior."
   },
-  { 
-    name: "David R.", 
-    role: "Tour Group Leader", 
-    text: "Booked a 12-person trip through DNS Travel. Flights, hotels, transfers — all handled flawlessly." 
+  {
+    name: "David R.",
+    role: "Tour Group Leader",
+    text: "Booked a 12-person trip through DNS Travel. Flights, hotels, transfers — all handled flawlessly."
   },
 ];
 
@@ -27,7 +27,7 @@ export function Testimonials() {
         </p>
         <h2 className="font-display text-3xl font-bold">What our clients say</h2>
       </div>
-      
+
       <div className="grid gap-6 md:grid-cols-3">
         {REVIEWS.map((review, i) => (
           <div key={i} className="relative rounded-2xl border border-border bg-card p-8 shadow-soft flex flex-col">

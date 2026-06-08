@@ -25,23 +25,23 @@ export function GalleryLightbox({ images, initialIndex, onClose }: LightboxProps
       <button className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors" onClick={onClose}>
         <X className="h-10 w-10" />
       </button>
-      
-      <button 
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 bg-black/20 rounded-full" 
+
+      <button
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 bg-black/20 rounded-full"
         onClick={(e) => { e.stopPropagation(); setIndex((p) => (p - 1 + images.length) % images.length); }}
       >
         <ChevronLeft className="h-8 w-8" />
       </button>
-      
-      <img 
-        src={images[index]} 
+
+      <img
+        src={images[index]}
         alt={`Gallery image ${index + 1}`}
         className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       />
-      
-      <button 
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 bg-black/20 rounded-full" 
+
+      <button
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 bg-black/20 rounded-full"
         onClick={(e) => { e.stopPropagation(); setIndex((p) => (p + 1) % images.length); }}
       >
         <ChevronRight className="h-8 w-8" />
